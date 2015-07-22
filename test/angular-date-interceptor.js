@@ -12,11 +12,11 @@ describe('angularDateInterceptor', function () {
     interceptor = angularDateInterceptor;
   }));
 
-  it('should have angularDateInterceptor be defined', function () {
+  it('should be defined', function () {
     expect(interceptor).toBeDefined();
   });
 
-  it('should have angularDateInterceptor as an interceptor', function () {
+  it('should be an interceptor', function () {
     expect(httpProvider.interceptors).toContain('angularDateInterceptor');
   });
 });
