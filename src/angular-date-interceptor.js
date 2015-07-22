@@ -14,11 +14,15 @@
       return response;
     };
 
+    function isIso8601(value) {
+      return angular.isString(value) && iso8601.test(value);
+    }
+
     function convertToDate(input) {
       angular.forEach(input, function (value, key) {
-        if (angular.isString(value) && iso8601.test(value)) {
+        if (isIso8601(value)) {
           input[key] = new Date(value);
-        }  else if (angular.isObject(value)) {
+        } else if (angular.isObject(value)) {
           convertToDate(value);
         }
       });

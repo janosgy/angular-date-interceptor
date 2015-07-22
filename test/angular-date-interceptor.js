@@ -6,7 +6,7 @@ describe('angularDateInterceptor', function () {
     httpBackend,
     http;
 
-  beforeEach(module('angularDateInterceptor', function($httpProvider){
+  beforeEach(module('angularDateInterceptor', function ($httpProvider) {
     httpProvider = $httpProvider;
   }));
 
@@ -33,7 +33,7 @@ describe('angularDateInterceptor', function () {
       };
 
     httpBackend.whenGET('/singleDate').respond(200, responseMock);
-    http.get('/singleDate').success(function(response) {
+    http.get('/singleDate').success(function (response) {
       expect(angular.isDate(response.testDate)).toBe(true);
       expect(response.testDate.getTime()).toEqual(baseDate.getTime());
       expect(response.isTest).toEqual(responseMock.isTest);
