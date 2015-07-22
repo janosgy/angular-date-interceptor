@@ -26,11 +26,14 @@ describe('angularDateInterceptor', function () {
 
   it('should parse date from an object', function (done) {
     var baseDate = new Date(),
-      response;
+      response,
+      responseMock = {
+        testDate: baseDate.toJSON(),
+        isTest: true,
+        test: 'Lorem Ipsum'
+      };
 
-    httpBackend.whenGET('/singleDate').respond(200, {
-      testDate: baseDate.toJSON()
-    });
+    httpBackend.whenGET('/singleDate').respond(200, responseMock);
     http.get('/singleDate').success(function(data) {
       response = data;
       done();
@@ -39,5 +42,7 @@ describe('angularDateInterceptor', function () {
 
     expect(angular.isDate(response.dob)).toBe(true);
     expect(response.testDate.getTime()).toEqual(baseDate.getTime());
+    expect(response.isTest).toEqual(responseMock.isTest);
+    expect(response.test).toEqual(responseMock.test);
   });
 });
