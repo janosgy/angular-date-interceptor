@@ -52,8 +52,8 @@ describe('angularDateInterceptor', function () {
         }
       };
 
-    httpBackend.whenGET('/singleDate').respond(200, responseMock);
-    http.get('/singleDate').success(function(data) {
+    httpBackend.whenGET('/deepObj').respond(200, responseMock);
+    http.get('/deepObj').success(function(data) {
       response = data;
       expect(angular.isDate(response.testObj.testDate)).toBe(true);
       expect(response.testObj.testDate.getTime()).toEqual(baseDate.getTime());
