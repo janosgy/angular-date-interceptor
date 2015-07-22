@@ -1,0 +1,11 @@
+{
+  "name": "angular-date-interceptor",
+  "description": "An AngularJS interceptor to parse dates from server response",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.4.0",
+    "angular-mocks": "~1.4.0"
+  }
+}
