@@ -42,4 +42,23 @@ describe('angularDateInterceptor', function () {
     });
     httpBackend.flush();
   });
+
+  it('should parse date from a deep object', function (done) {
+    var baseDate = new Date(),
+      response,
+      responseMock = {
+        testObj: {
+          testDate: baseDate.toJSON()
+        }
+      };
+
+    httpBackend.whenGET('/singleDate').respond(200, responseMock);
+    http.get('/singleDate').success(function(data) {
+      response = data;
+      expect(angular.isDate(response.testObj.testDate)).toBe(true);
+      expect(response.testObj.testDate.getTime()).toEqual(baseDate.getTime());
+      done();
+    });
+    httpBackend.flush();
+  });
 });

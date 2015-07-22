@@ -18,6 +18,8 @@
       angular.forEach(input, function (value, key) {
         if (angular.isString(value) && iso8601.test(value)) {
           input[key] = new Date(value);
+        }  else if (angular.isObject(value)) {
+          convertToDate(value);
         }
       });
     }
