@@ -1,11 +1,14 @@
 'use strict';
 
-describe('angularDateInterceptor', function() {
-  var interceptor;
+describe('angularDateInterceptor', function () {
+  var interceptor,
+    httpProvider;
 
-  beforeEach(module('angularDateInterceptor'));
+  beforeEach(module('angularDateInterceptor', function($httpProvider){
+    httpProvider = $httpProvider;
+  }));
 
-  beforeEach(inject(function ($rootScope, angularDateInterceptor) {
+  beforeEach(inject(function (angularDateInterceptor) {
     interceptor = angularDateInterceptor;
   }));
 
@@ -13,4 +16,7 @@ describe('angularDateInterceptor', function() {
     expect(interceptor).toBeDefined();
   });
 
+  it('should have angularDateInterceptor as an interceptor', function () {
+    expect(httpProvider.interceptors).toContain('angularDateInterceptor');
+  });
 });
