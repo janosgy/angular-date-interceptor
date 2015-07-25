@@ -19,7 +19,7 @@
     }
 
     function convertToDate(input) {
-      if(!angular.isObject(input)) {
+      if (!angular.isObject(input)) {
         return input;
       }
 

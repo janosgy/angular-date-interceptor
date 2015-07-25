@@ -53,7 +53,7 @@ describe('angularDateInterceptor', function () {
       };
 
     httpBackend.whenGET('/deepObj').respond(200, responseMock);
-    http.get('/deepObj').success(function(data) {
+    http.get('/deepObj').success(function (data) {
       response = data;
       expect(angular.isDate(response.testObj.testDate)).toBe(true);
       expect(response.testObj.testDate.getTime()).toEqual(baseDate.getTime());
@@ -68,7 +68,7 @@ describe('angularDateInterceptor', function () {
       responseMock = baseDate.toJSON();
 
     httpBackend.whenGET('/string').respond(200, responseMock);
-    http.get('/string').success(function(data) {
+    http.get('/string').success(function (data) {
       response = data;
       expect(angular.isDate(response)).toBe(false);
       expect(response).toEqual(baseDate.toJSON());
