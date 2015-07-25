@@ -61,4 +61,19 @@ describe('angularDateInterceptor', function () {
     });
     httpBackend.flush();
   });
+
+  it('should not do anything if input is not an object or array ', function (done) {
+    var baseDate = new Date(),
+      response,
+      responseMock = baseDate.toJSON();
+
+    httpBackend.whenGET('/string').respond(200, responseMock);
+    http.get('/string').success(function(data) {
+      response = data;
+      expect(angular.isDate(response)).toBe(false);
+      expect(response).toEqual(baseDate.toJSON());
+      done();
+    });
+    httpBackend.flush();
+  });
 });

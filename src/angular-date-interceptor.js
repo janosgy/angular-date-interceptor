@@ -19,6 +19,10 @@
     }
 
     function convertToDate(input) {
+      if(!angular.isObject(input)) {
+        return input;
+      }
+
       angular.forEach(input, function (value, key) {
         if (isIso8601(value)) {
           input[key] = new Date(value);
