@@ -3,7 +3,7 @@
 
 An AngularJS interceptor to parse dates from server response.
 
-[![Build Status](https://codeship.com/projects/58bfa520-2ed5-0132-0af5-6a016ae0b812/status?branch=master]
+[![Codeship Status for ins87/angular-date-interceptor](https://www.codeship.io/projects/2975f190-646d-0131-452c-7a6d2bba8338/status?branch=master)](https://www.codeship.io/projects/39417)
 
 The problem
 -----------
@@ -15,7 +15,7 @@ Installation
 You can choose your preferred method of installation:
 * Through bower: `bower install angular-date-interceptor --save`
 * Through npm: `npm install angular-date-interceptor --save`
-* Download from github: [unminified version](https://raw.github.com/Ins87/angular-date-interceptor/master/dist/angular-date-interceptor.js) or [minified version](https://raw.github.com/Ins87/angular-date-interceptor/master/dist/angular-date-interceptor.min.js)
+* Download from github: [unminified version](https://raw.github.com/ins87/angular-date-interceptor/master/dist/angular-date-interceptor.js) or [minified version](https://raw.github.com/ins87/angular-date-interceptor/master/dist/angular-date-interceptor.min.js)
 
 Usage
 -----

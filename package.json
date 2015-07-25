@@ -3,11 +3,11 @@
   "description": "An AngularJS interceptor to parse dates from server response",
   "version": "0.0.0",
   "main": "dist/angular-date-interceptor.js",
-  "homepage": "https://github.com/Ins87/angular-date-interceptor",
+  "homepage": "https://github.com/ins87/angular-date-interceptor",
   "author": "Janos Gyurisan",
   "repository": {
     "type": "git",
-    "url": "git://github.com/Ins87/angular-date-interceptor.git"
+    "url": "git://github.com/ins87/angular-date-interceptor.git"
   },
   "license": "MIT",
   "devDependencies": {
