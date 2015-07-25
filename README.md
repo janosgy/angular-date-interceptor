@@ -1,5 +1,5 @@
 # angular-date-interceptor
-==============
+-----------
 
 An AngularJS interceptor to parse dates from server response.
 
@@ -7,7 +7,7 @@ An AngularJS interceptor to parse dates from server response.
 
 The problem
 -----------
-By default, if you want to bind a model (which comes from the server) to a date input, you will get `Error: [ngModel:datefmt] Expected `2015-07-25T11:40:35.395Z` to be a date`. 
+By default, if you want to bind a model (which comes from the server) to a date input, you will get `Error: [ngModel:datefmt] Expected 2015-07-25T11:40:35.395Z to be a date`. 
 The problem is that the date is in ISO 8061 string format and it is not a date object. This interceptor convert dates into date objects.
 
 Installation
