@@ -7,7 +7,7 @@
     .config(config);
 
   function AngularDateInterceptor() {
-    var iso8601 = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?Z$/;
+    var iso8601 = /^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d+)?(([+-]\d\d:\d\d)|Z)?$/;
 
     this.response = function (response) {
       convertToDate(response.data);
