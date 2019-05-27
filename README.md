@@ -13,7 +13,6 @@ The problem is that the date is in ISO 8061 string format and it is not a date o
 Installation
 ------------
 You can choose your preferred method of installation:
-* Through bower: `bower install angular-date-interceptor --save`
 * Through npm: `npm install angular-date-interceptor --save`
 * Download from github: [unminified version](https://raw.github.com/ins87/angular-date-interceptor/master/dist/angular-date-interceptor.js) or [minified version](https://raw.github.com/ins87/angular-date-interceptor/master/dist/angular-date-interceptor.min.js)
 
